@@ -1,0 +1,38 @@
+Programozási alapok:
+
+1.
+// javascriptben number, erősen tipusos nyelvekben int, float, double, long, short
+const number = 42; const float = 3.145; 
+
+// String
+const string = 'Ez egy string';
+
+// Array
+const arr = [1, 2, 3];
+
+// Object
+const object = { key1: value1, key2: value2 };
+
+2.
+//a javascriptben a primitív adattípusok érték szerint adódnak át, míg a tömbök, objectek referenciaként.
+//ha egy változó referenciaként adódik át akkor a memória címe kerül átadásra és egy függvényen belül végzettt módosítás a függvényen kívül is látszódik
+
+let array = [1, 2, 3];
+
+const doubleEachElement = (arr) => {
+	for (let i = 0; i < arr.length, i++) {
+		arr[i] *= 2;
+	}
+};
+
+console.log(array); // [2, 4, 6]
+
+//ha egy valtozó értékként adódik át, egy függvényen belül végzett módosítás nem módosítja az eredeti változót
+
+let number = 1;
+
+const double = (number) => {
+	n *= 2;
+	console.log(number); // 2
+}
+console.log(number); // 1
